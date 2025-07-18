@@ -94,4 +94,40 @@ public class CalculatorTest {
         double multiplyResult = calculator.multiply(5.2, 61.);
         assertEquals(317.2, multiplyResult,0.0001);
     }
+
+    @Test
+    void divideIntNumbers(){
+        int divideResult = calculator.divide(5, 6);
+        assertEquals(0, divideResult);
+    }
+
+    @Test
+    void divideFloatNumbers(){
+        float divideResult = calculator.divide(5.2f, 61.f);
+        assertEquals(0.0852, divideResult,0.0001);
+    }
+
+    @Test
+    void divideLongNumbers(){
+        long divideResult = (long) calculator.divide(5.2, 61);
+        assertEquals(0, divideResult);
+    }
+    @Test
+    void divideShortNumbers(){
+        short divideResult = (short) calculator.divide(5.2, 61);
+        assertEquals(0, divideResult);
+    }
+    @Test
+    void divideDoubleNumbers(){
+        double divideResult = calculator.divide(5.2, 61.);
+        assertEquals(0.0852, divideResult,0.0001);
+    }
+    @Test
+    void dividedByZero(){
+        Exception exception = assertThrows(ArithmeticException.class,
+                () -> calculator.divide(5, 0));
+
+        assertEquals("/ by zero", exception.getMessage());
+
+    }
 }
