@@ -67,5 +67,31 @@ public class CalculatorTest {
     }
 
 
+    @Test
+    void multiplyIntNumbers(){
+        int multiplyResult = calculator.multiply(5, 6);
+        assertEquals(30, multiplyResult);
+    }
 
+    @Test
+    void multiplyFloatNumbers(){
+        float multiplyResult = calculator.multiply(5.2f, 61.f);
+        assertEquals(317.2, multiplyResult,0.0001);
+    }
+
+    @Test
+    void multiplyLongNumbers(){
+        long multiplyResult = (long) calculator.multiply(5.2, 61);
+        assertEquals(317, multiplyResult);
+    }
+    @Test
+    void multiplyShortNumbers(){
+        short multiplyResult = (short) calculator.multiply(5.2, 61);
+        assertEquals(317, multiplyResult);
+    }
+    @Test
+    void multiplyDoubleNumbers(){
+        double multiplyResult = calculator.multiply(5.2, 61.);
+        assertEquals(317.2, multiplyResult,0.0001);
+    }
 }

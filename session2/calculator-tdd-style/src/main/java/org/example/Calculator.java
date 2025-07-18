@@ -58,4 +58,24 @@ public class Calculator {
     public short difference(short sum1, short sum2){
         return (short) (sum1 - sum2);
     }
+
+    public int multiply(int sum1, int sum2){
+        return sum1 * sum2;
+    }
+
+    public float multiply(float sum1, float sum2){
+        return sum1 * sum2;
+    }
+
+    public double multiply(double sum1, double sum2){
+        return sum1 * sum2;
+    }
+
+    public long multiply(long sum1, long sum2){
+        return sum1 * sum2;
+    }
+
+    public short multiply(short sum1, short sum2){
+        return (short) (sum1 * sum2);
+    }
 }
