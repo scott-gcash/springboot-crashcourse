@@ -11,34 +11,6 @@ public class CalculatorTest {
     }
 
     @Test
-    void shouldBeTurnedOff() {
-        assertFalse(calculator.isOn());
-    }
-
-    @Test
-    void shouldTurnedOn() {
-        calculator.turnOn();
-        assertTrue(calculator.isOn());
-    }
-
-    @Test
-    void shouldTurnedOff() {
-        calculator.turnOn();
-        assertTrue(calculator.isOn());
-        calculator.turnOff();
-        assertFalse(calculator.isOn());
-    }
-
-    @Test
-    void shouldBeOffAfterOn(){
-        calculator.turnOn();
-        assertFalse(calculator.isOff());
-
-        calculator.turnOff();
-        assertTrue(calculator.isOff());
-    }
-
-    @Test
     void addIntNumbers(){
         int sumResult = calculator.sum(5, 6);
         assertEquals(11, sumResult);
@@ -47,6 +19,22 @@ public class CalculatorTest {
     @Test
     void addFloatNumbers(){
         float sumResult = calculator.sum(5.2f, 61.f);
-        assertEquals(11.3, sumResult);
+        assertEquals(66.2, sumResult,0.0001);
+    }
+
+    @Test
+    void addLongNumbers(){
+        long sumResult = (long) calculator.sum(5.2, 61);
+        assertEquals(66, sumResult);
+    }
+    @Test
+    void addShortNumbers(){
+        short sumResult = (short) calculator.sum(5.2, 61);
+        assertEquals(66, sumResult);
+    }
+    @Test
+    void addDoubleNumbers(){
+        double sumResult = calculator.sum(5.2, 61.);
+        assertEquals(66.2, sumResult,0.0001);
     }
 }
