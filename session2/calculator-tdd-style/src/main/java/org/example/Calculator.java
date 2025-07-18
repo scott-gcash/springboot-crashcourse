@@ -38,4 +38,24 @@ public class Calculator {
     public short sum(short sum1, short sum2){
         return (short) (sum1 + sum2);
     }
+
+    public int difference(int sum1, int sum2){
+        return sum1 - sum2;
+    }
+
+    public float difference(float sum1, float sum2){
+        return sum1 - sum2;
+    }
+
+    public double difference(double sum1, double sum2){
+        return sum1 - sum2;
+    }
+
+    public long difference(long sum1, long sum2){
+        return sum1 - sum2;
+    }
+
+    public short difference(short sum1, short sum2){
+        return (short) (sum1 - sum2);
+    }
 }
